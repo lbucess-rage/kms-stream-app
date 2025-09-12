@@ -1,0 +1,47 @@
+.kms-api-input {
+  margin-bottom: 1.5rem;
+}
+
+.api-input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.875rem;
+}
+
+.api-input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.api-input-field:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.api-input-field:disabled {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.api-info {
+  margin-top: 0.5rem;
+}
+
+.api-docs-link {
+  color: #0066cc;
+  text-decoration: none;
+  margin-left: 0.25rem;
+}
+
+.api-docs-link:hover {
+  text-decoration: underline;
+}
