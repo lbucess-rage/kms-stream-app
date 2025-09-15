@@ -24,7 +24,7 @@ function App() {
       return;
     }
 
-    // Add question to history if not already exists
+    // Add original question to history (without markdown prompt)
     if (question.trim() && !requestHistory.includes(question.trim())) {
       setRequestHistory(prev => [question.trim(), ...prev.slice(0, 9)]); // Keep only 10 items
     }
@@ -35,7 +35,9 @@ function App() {
     setEvidenceData([]);
     streamParser.reset();
 
-    const request = kmsApiService.createRequest(question);
+    // Add markdown prompt suffix for better formatting (hidden from UI)
+    const enhancedQuestion = question + ' 마크다운 형식으로 알려줘';
+    const request = kmsApiService.createRequest(enhancedQuestion);
 
     try {
       if (streamMode) {
